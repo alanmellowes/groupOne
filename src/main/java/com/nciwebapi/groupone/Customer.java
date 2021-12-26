@@ -1,12 +1,18 @@
 /*
+<<<<<<< HEAD
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
+=======
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+>>>>>>> e4bbc4a9ce162ff6e3f5d4b872eb77620769ecc2
  */
 package com.nciwebapi.groupone;
 
 /**
  *
+<<<<<<< HEAD
  * @author florm
  */
 public class Customer {
@@ -68,4 +74,25 @@ public class Customer {
         this.email = email;
     }
 
+=======
+ * @author Alan.Mellowes
+ */
+public class Customer {
+    private int id;
+    private String name, password,address, email;
+
+public Customer(){
+} 
+
+public Customer(int account_id, String name, String password, String address, String email){
+       this.id = account_id;
+       this.name = name;
+       this.password = password;
+       this.address = address;
+       this.email = email;
+    }
+
+public int getId(){
+}
+>>>>>>> e4bbc4a9ce162ff6e3f5d4b872eb77620769ecc2
 }
