@@ -1,5 +1,5 @@
 
-package com.nciwebapi;
+package com.nciwebapi.groupone;
 
 import java.util.ArrayList;
 import java.util.List;
