@@ -12,7 +12,7 @@ public class Payment {
     private double amount;
     private int fromAccountID;
     private int toAccountID;
-    private Date timeOfPayment;
+    private Date date_payment;
 
     public Payment() {
     }
@@ -21,7 +21,7 @@ public class Payment {
         this.amount = amount;
         this.fromAccountID = fromAccountID;
         this.toAccountID = toAccountID;
-        this.timeOfPayment = timeOfPayment;
+        this.date_payment = date_payment;
         this.id = id;
     }
 
@@ -50,11 +50,11 @@ public class Payment {
     }
 
     public Date getTimeOfPayment() {
-        return timeOfPayment;
+        return date_payment;
     }
 
-    public void setTimeOfPayment(Date timeOfPayment) {
-        this.timeOfPayment = timeOfPayment;
+    public void setTimeOfPayment(Date date_payment) {
+        this.date_payment = date_payment;
     }
 
     public int getId() {
