@@ -1,0 +1,84 @@
+<!DOCTYPE html>  
+<html>  
+    <head>  
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Banking Services - New Clients</title> 
+		
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+    </head>  
+	
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading display-4">New Client Registration</h1>
+            <p class="lead text-muted">Kindly proceed with the details</p>
+			
+            <form action="http://localhost:8080/webappapi/api/customers/new" method="POST">
+                <fieldset>
+                    <legend>Client Details:</legend>
+                    ID:<br />
+                    <input type="number" name="id"><br /><br />
+
+                    Name:<br />
+                    <input type="text" name="name"><br /><br />
+
+                    Password:<br />
+                    <input type="number" name="password"><br /><br />
+
+                    Address:<br />
+                    <input type="text" name="address"><br /><br />
+
+                    Email:<br />
+                    <input type="text" name="email"><br /><br />
+
+                    <button value="Submit"  onClick="window.location.reload()">
+                </fieldset>
+            </form>
+        </div>
+    </section>
+
+
+    <div class="table-responsive">
+        <h1>Information</h1>
+        <br />
+        <table class="table table-bordered table-striped" id="customer_table">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Password</th>
+                <th>Address</th>
+                <th>Email</th>
+
+            </tr>
+
+        </table>
+    </div> 
+
+    <br />  
+</body>
+
+
+<script>
+    $(document).ready(function () {
+        $.getJSON("http://localhost:8080/webappapi/api/customers", function (data) {
+            var customerjson = '';
+            $.each(data, function (key, value) {
+                customerjson += '<tr>';
+                customerjson += '<td>' + value.id + '</td>';
+                customerjson += '<td>' + value.name + '</td>';
+                customerjson += '<td>' + value.password + '</td>';
+                customerjson += '<td>' + value.address + '</td>';
+                customerjson += '<td>' + value.email + '</td>';
+                customerjson += '</tr>';
+            });
+            $('#customer_table').append(customerjson);
+        });
+    });
+</script>   
+
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha384-fJU6sGmyn07b+uD1nMk7/iSb4yvaowcueiQhfVgQuD98rfva8mcr1eSvjchfpMrH" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</html>  

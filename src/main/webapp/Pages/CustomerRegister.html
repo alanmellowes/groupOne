@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <title>New Client Registeration</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    </head>
+	
+    <body>
+	
+        <section class="jumbotron text-center">
+            <div class="container">
+                <h1 class="jumbotron-heading display-4">New client Registeration</h1>
+                <p class="lead text-muted">Kindly complete all the details, to proceed!</p>
+				
+<form action="http://localhost:8080/webappapi/api/customers/new" method="POST">
+
+  <fieldset>
+    <legend>Customer Details:</legend>
+    ID:<br />
+    <input type="number" name="id"><br /><br />
+    
+    Name:<br />
+    <input type="text" name="name"><br /><br />
+    
+    Password:<br />
+    <input type="number" name="password"><br /><br />
+
+    Address:<br />
+    <input type="text" name="address"><br /><br />
+    
+    Email:<br />
+    <input type="text" name="email"><br /><br />
+    
+    <input type="submit" value="Submit">
+  </fieldset>
+</form>
+            </div>
+        </section>
+
+
+       <footer class="jumbotron text-center">
+
+            <h3>Continuous assesment - Group project Web API services</h3>
+            <p>Banking Services project (National Bank of NCI) - created  as part of the module ( Web Services and API Development ) in year 4 BSCH (Honours) Computing. <p>
+        </footer>
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+
+</html>
