@@ -10,17 +10,17 @@ public class Payment {
 
     private int id;
     private double amount;
-    private int fromAccountID;
-    private int toAccountID;
+    private int senderAccountID;
+    private int receiverAccountID;
     private Date date_payment;
 
     public Payment() {
     }
 
-    public Payment(double amount, int fromAccountID, int toAccountID, Date timeOfPayment, int id) {
+    public Payment(double amount, int senderAccountID, int receiverAccountID, Date timeOfPayment, int id) {
         this.amount = amount;
-        this.fromAccountID = fromAccountID;
-        this.toAccountID = toAccountID;
+        this.senderAccountID = senderAccountID;
+        this.receiverAccountID = receiverAccountID;
         this.date_payment = date_payment;
         this.id = id;
     }
@@ -33,20 +33,20 @@ public class Payment {
         this.amount = amount;
     }
 
-    public int getFromAccountID() {
-        return fromAccountID;
+    public int getSenderAccountID() {
+        return senderAccountID;
     }
 
-    public void setFromAccountID(int fromAccountID) {
-        this.fromAccountID = fromAccountID;
+    public void setSenderAccountID(int senderAccountID) {
+        this.senderAccountID = senderAccountID;
     }
 
-    public int getToAccountID() {
-        return toAccountID;
+    public int getReceiverAccountID() {
+        return receiverAccountID;
     }
 
-    public void setToAccountID(int toAccountID) {
-        this.toAccountID = toAccountID;
+    public void setReceiverAccountID(int receiverAccountID) {
+        this.receiverAccountID = receiverAccountID;
     }
 
     public Date getTimeOfPayment() {
