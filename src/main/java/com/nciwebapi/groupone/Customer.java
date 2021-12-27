@@ -1,20 +1,9 @@
-/*
-<<<<<<< HEAD
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
-=======
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
->>>>>>> e4bbc4a9ce162ff6e3f5d4b872eb77620769ecc2
- */
 package com.nciwebapi.groupone;
 
-/**
- *
-<<<<<<< HEAD
- * @author florm
- */
+import java.util.List;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
 public class Customer {
 
     private int id;
@@ -34,6 +23,7 @@ public class Customer {
         this.email = email;
     }
 
+    @XmlElement
     public int getId() {
         return id;
     }
@@ -42,6 +32,7 @@ public class Customer {
         this.id = id;
     }
 
+    @XmlElement
     public String getName() {
         return name;
     }
@@ -50,6 +41,7 @@ public class Customer {
         this.name = name;
     }
 
+    @XmlElement
     public String getPassword() {
         return password;
     }
@@ -58,6 +50,7 @@ public class Customer {
         this.password = password;
     }
 
+    @XmlElement
     public String getAddress() {
         return address;
     }
@@ -66,11 +59,30 @@ public class Customer {
         this.address = address;
     }
 
+    @XmlElement
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @XmlRootElement(name = "Customers")
+    public static class Customers {
+
+        private List<Customer> cList;
+
+        public Customers(List<Customer> list) {
+            this.cList = list;
+        }
+
+        public List<Customer> getCustomerList() {
+            return cList;
+        }
+
+        public void setCustomerList(List<Customer> cList) {
+            this.cList = cList;
+        }
     }
 }

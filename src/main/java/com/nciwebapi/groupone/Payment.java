@@ -1,11 +1,10 @@
 package com.nciwebapi.groupone;
 
 import java.util.Date;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
-/**
- *
- * @author florm
- */
+@XmlRootElement
 public class Payment {
 
     private int id;
@@ -24,7 +23,7 @@ public class Payment {
         this.date_payment = date_payment;
         this.id = id;
     }
-
+    @XmlElement
     public double getAmount() {
         return amount;
     }
@@ -32,15 +31,15 @@ public class Payment {
     public void setAmount(double amount) {
         this.amount = amount;
     }
-
+    @XmlElement
     public int getSenderAccountID() {
         return senderAccountID;
     }
-
+    
     public void setSenderAccountID(int senderAccountID) {
         this.senderAccountID = senderAccountID;
     }
-
+    @XmlElement
     public int getReceiverAccountID() {
         return receiverAccountID;
     }
@@ -48,7 +47,7 @@ public class Payment {
     public void setReceiverAccountID(int receiverAccountID) {
         this.receiverAccountID = receiverAccountID;
     }
-
+    @XmlElement
     public Date getTimeOfPayment() {
         return date_payment;
     }
@@ -57,6 +56,7 @@ public class Payment {
         this.date_payment = date_payment;
     }
 
+    @XmlElement
     public int getId() {
         return id;
     }
