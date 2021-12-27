@@ -88,12 +88,12 @@ public class CustomerResource {
         try {
             id = new Integer(customer_id);
         } catch (NumberFormatException e) {
-            throw new InputException("Please supply an integer to retrieve a customer record.");
+            throw new InputException("Enter an integer to retrieve a customer record.");
         }
 
         Customer cust = CustomerStorage.getStore().get(new Integer(id));
         if (cust == null) {
-            throw new NotFoundException("No such Customer with id " + id);
+            throw new NotFoundException("Customer with following ID does not exist. ID: " + id);
         }
         return cust;
     }
